@@ -254,7 +254,7 @@ python demo.py --model_path /path/to/checkpoint.pt \
 
 `--camera_num_iterations` defaults to `4`; setting it to `1` skips three refinement passes in the camera head (and shrinks its KV cache by 4×).
 
-# 🎥 Batch Inference & Offline Video Rendering
+<!-- # 🎥 Batch Inference & Offline Video Rendering
 
 `demo_render/` produces headless point-cloud flythrough videos from a video or image folder — a two-phase pipeline that shares the same PyTorch / FlashInfer / checkpoint stack as `demo.py`:
 
@@ -417,7 +417,7 @@ scene_name/
 
 Per-frame files are loaded in parallel and stacked automatically — recommended for 500+ frame sequences.
 
-See [`demo_render/README.md`](demo_render/README.md) for the full parameter reference (scene / preprocess / camera segments / render / overlay / pipeline / gpu), multi-segment camera path examples, and library-style usage.
+See [`demo_render/README.md`](demo_render/README.md) for the full parameter reference (scene / preprocess / camera segments / render / overlay / pipeline / gpu), multi-segment camera path examples, and library-style usage. -->
 
 # 📜 License
 
