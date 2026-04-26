@@ -38,6 +38,13 @@ LingBot-Map has focused on:
 - **2026-04-24** — Fixed a FlashInfer KV cache bug where `--keyframe_interval > 1` silently cached non-keyframes. **You should now see better pose and reconstruction quality when running with more than 320 frames**.
 ---
 
+# 📋 TODO
+
+- [ ] Release evaluation benchmark
+- [ ] Release demo scripts
+
+---
+
 # ⚙️ Quick Start
 
 ## Installation
