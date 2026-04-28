@@ -306,7 +306,7 @@ This builds `voxel_morton_ext` and `frustum_cull_ext` in place — both are impo
 
 ## Quick Start
 
-### Worked example — long indoor walkthrough (~25 000 frames)
+### Worked example — long indoor walkthrough (~25 000 frames, 13 minutes)
 
 **Dataset:** Download the example video from [robbyant/lingbot-map-demo](https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main) on Hugging Face.
 
