@@ -354,8 +354,6 @@ For a given output name (e.g. `<scene>` or `<video_name>`):
 | `<name>_pointcloud_config.yaml` | Full config snapshot of this run |
 | `batch_results.json` | Per-scene success / duration summary |
 
-See [`demo_render/README.md`](demo_render/README.md) for the full parameter reference (scene / preprocess / camera segments / render / overlay / pipeline / gpu), multi-segment camera path examples, and library-style usage.
-
 # 📜 License
 
 This project is released under the Apache License 2.0. See [LICENSE](LICENSE.txt) file for details.
