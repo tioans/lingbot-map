@@ -167,6 +167,7 @@ We will provide more examples in the follow-up.
 
 Use `--keyframe_interval` to reduce KV cache memory by only keeping every N-th frame as a keyframe. Non-keyframe frames still produce predictions but are not stored in the cache. This is useful for long sequences which exceed 320 frames (We train with video RoPE on 320 views, so performance degrades when the KV cache stores more than 320 views. Using a keyframe strategy allows inference over longer sequences.).
 
+
 **Dataset:** Download the demo sequences from [robbyant/lingbot-map-demo](https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main) on Hugging Face.
 
 Example run on the `travel` sequence from the dataset above (sky masking on, 4 camera optimization iterations, keyframe every 2 frames):
@@ -185,7 +186,7 @@ https://github.com/user-attachments/assets/d350b590-d036-4363-af8c-7af3918338ef
 
 
 
-
+> **Note on inference range.** Our method does not perform state resetting by default, so the maximum inference range is bounded by the longest distance seen during training on the dataset. Beyond that distance, state resetting becomes necessary. If you observe pose collapse, switch to windowed mode (`--mode windowed`) — in most cases tuning `--keyframe_interval` alone is enough and the rest of the windowed parameters can stay at their defaults.
 
 
 ### Windowed Inference (for long sequences, >3000 frames)
@@ -193,7 +194,7 @@ https://github.com/user-attachments/assets/d350b590-d036-4363-af8c-7af3918338ef
 ```bash
 python demo.py --model_path /path/to/lingbot-map-long.pt \
     --video_path video.mp4 --fps 10 \
-    --mode windowed --window_size 128
+    --mode windowed --window_size 128 --overlap_keyframes 16 --keyframe_interval 2 
 ```
 
 
